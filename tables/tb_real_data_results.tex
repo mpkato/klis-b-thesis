@@ -1,0 +1,35 @@
+\begin{tabular}{l c c c p{0.1em} c }
+\toprule
+&\multicolumn{5}{c}{精度}\\
+\cmidrule(lr){2-6}
+&都道府県&国&カメラ&&総合\\
+\midrule
+\multirow{2}{*}{RankNet~\cite{burges2005learning}}&0.482 & 0.478 & 0.530 && 0.497 \\ 
+& (0.023) & (0.025) & (0.030) && (0.015) \\
+\midrule
+\multirow{2}{*}{RankBoost~\cite{freund2003efficient}}&0.513 & 0.636 & 0.552 && 0.557 \\
+ & (0.028) & (0.024) & (0.036) && (0.018) \\
+\midrule
+\multirow{2}{*}{LinearFeature~\cite{metzler2007linear}}&0.566 & 0.670 & 0.614 && 0.609 \\
+ & (0.019) & (0.024) & (0.034) && (0.015) \\
+\midrule
+\multirow{2}{*}{LambdaMART~\cite{wu2010adapting}}&0.614 & 0.659 & 0.697 && 0.654 \\
+ & (0.021) & (0.019) & (0.024) && (0.013) \\
+\midrule
+\multirow{2}{*}{ListNet~\cite{cao2007learning}}&0.559 & 0.518 & 0.504 && 0.530 \\
+ & (0.020) & (0.022) & (0.031) && (0.014) \\
+\midrule
+\midrule
+\multirow{2}{*}{{\bf CGL} (TF-IDF, Linear)}&{\bf 0.661} & 0.716 & {\bf 0.823} && {\bf 0.730} \\
+ & (0.017) & (0.022) & (0.019) && (0.012) \\
+\midrule
+\multirow{2}{*}{{\bf CGL} (TF-IDF, RBF)}&{\bf 0.661} & 0.725 & 0.799 && 0.724 \\
+ & (0.019) & (0.021) & (0.019) && (0.012) \\
+\midrule
+\multirow{2}{*}{{\bf CGL} (Distributed, Linear)}& 0.646 & 0.701 & 0.798 && 0.712 \\
+ & (0.020) & (0.023) & (0.021) && (0.013) \\
+\midrule
+\multirow{2}{*}{{\bf CGL} (Distributed, RBF)}&{\bf 0.661} & {\bf 0.731} & 0.804 && 0.728 \\
+ & (0.018) & (0.022) & (0.021) && (0.013) \\
+\bottomrule
+\end{tabular}

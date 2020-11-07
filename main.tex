@@ -1,0 +1,58 @@
+\documentclass[a4paper,12pt,oneside,openany,xelatex,ja=standard,jafont=noto]{bxjsbook}
+%
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{kasysb} % KASysの卒業論文フォーマット
+%
+\title{文脈誘導型ランキング学習，というタイトルは短いので少し文字を足す}
+\subtitle{サブタイトル} % 基本的に利用しない
+\studentid{123456789} % 学生番号
+\author{加藤　誠} % 自分の氏名．姓名の間は全角スペース
+\affiliation{筑波大学　情報学群\\知識情報・図書館学類}
+\gradyear{2021} % 基本的に卒業論文の翌年となるので注意
+\gradmonth{3} % 基本的に3月か9月
+\supervisor{加藤　誠}
+%
+\begin{document}
+%
+\maketitle
+%
+\frontmatter
+%
+% 抄録
+\input{abstract}
+%
+\setcounter{tocdepth}{3}
+\tableofcontents
+\thispagestyle{empty}
+%
+\mainmatter
+%
+% 本文
+\include{section1}
+\include{section2}
+\include{section3}
+\include{section4}
+\include{section5}
+%
+%
+\appendix
+%
+% 付録
+\include{appendixA}
+%
+\backmatter
+\pagenumbering{roman}
+%
+% 謝辞
+\include{acknowledgment}
+%
+\cleardoublepage
+\bibliographystyle{sist02}
+% 参考文献
+\bibliography{bibliography}
+%
+\end{document}

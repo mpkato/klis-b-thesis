@@ -1,0 +1,64 @@
+\usepackage[a4paper]{geometry}
+
+\makeatletter
+\newcommand{\subtitle}[1]{\def\@subtitle{#1}}
+\newcommand{\gradyear}[1]{\def\@gradyear{#1}}
+\newcommand{\gradmonth}[1]{\def\@gradmonth{#1}}
+\newcommand{\studentid}[1]{\def\@studentid{#1}}
+\newcommand{\affiliation}[1]{\def\@affiliation{#1}}
+\newcommand{\supervisor}[1]{\def\@supervisor{#1}}
+\renewcommand{\maketitle}{
+    \begin{titlepage}
+      \newgeometry{left=30truemm,right=30truemm,top=30truemm,bottom=30truemm}
+      \let\footnotesize\small
+      \let\footnoterule\relax
+      \let\footnote\thanks
+      \vskip 60\jsc@mpt
+      \begin{center}
+        \null\vfil
+        {\LARGE \textgt{\@title} \par}
+        \ifdefined \@subtitle
+          \vskip 1em
+          {\LARGE \textgt{— \@subtitle —} \par}
+        \fi
+        \vskip 12em
+        {\Large \@gradyear 年 \@gradmonth 月 \par}
+        \vskip 8em
+        {\Large \@studentid \par}  
+        {\Large \@author \par}
+        \vskip 8em        
+        {\Large \@affiliation \par}
+        \vskip 1.5em
+      \end{center}
+    \end{titlepage}
+  }%
+  
+\newenvironment{abst}
+{% begin code
+    \thispagestyle{empty}
+    \begin{titlepage}
+      \newgeometry{left=30truemm,right=30truemm,top=30truemm,bottom=30truemm}
+      \let\footnotesize\small
+      \let\footnoterule\relax
+      \let\footnote\thanks
+      \vskip 60\jsc@mpt
+      \begin{center}
+        \fontsize{12.971truept}{18.067truept}\selectfont
+        \textgt{\@title} \par
+        \ifdefined \@subtitle
+        \textgt{— \@subtitle —}
+        \fi
+        \vskip 18.067truept
+      \end{center}
+      \fontsize{11.35truept}{18.067truept}\selectfont
+      {\raggedleft \@author \par}
+      \vskip 18.067truept
+      \par
+}%
+{% end code
+    \vskip 18.067truept
+    {\raggedleft
+      \par （指導教員\qquad \@supervisor） \par
+    }
+  \end{titlepage}
+}
