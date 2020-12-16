@@ -1122,7 +1122,8 @@ FUNCTION {misc}
 { output.bibitem
   format.authors output
   title howpublished new.block.checkb
-  format.title output
+  format.quoted.title output
+  new.block
   howpublished new.block.checka
   howpublished "howpublished" bibinfo.check output
   format.date output
