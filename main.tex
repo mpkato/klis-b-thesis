@@ -7,8 +7,8 @@
 \usepackage{multirow}
 \usepackage{klisb} % 卒業論文フォーマット
 %
-\title{文脈誘導型ランキング学習，というタイトルは短いので少し文字を足す}
-\subtitle{サブタイトル} % 基本的に利用しない
+\title{文脈誘導型ランキング学習}
+%\subtitle{サブタイトル} % 基本的に利用しない
 \studentid{123456789} % 学生番号
 \author{加藤　誠} % 自分の氏名．姓名の間は全角スペース
 \affiliation{筑波大学　情報学群\\知識情報・図書館学類}
@@ -17,6 +17,8 @@
 \supervisor{加藤　誠}
 %
 \begin{document}
+% 「TC:ignore」から「TC:endignore」までは文字カウントが無視される
+%TC:ignore
 %
 \maketitle
 %
@@ -30,6 +32,7 @@
 \thispagestyle{empty}
 %
 \mainmatter
+%TC:endignore
 %
 % 本文
 \include{section1}
@@ -38,12 +41,7 @@
 \include{section4}
 \include{section5}
 %
-%
-\appendix
-%
-% 付録
-\include{appendixA}
-%
+%TC:ignore
 \backmatter
 \pagenumbering{roman}
 %
@@ -55,4 +53,5 @@
 % 参考文献
 \bibliography{bibliography}
 %
+%TC:endignore
 \end{document}
